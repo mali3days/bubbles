@@ -29,13 +29,10 @@ function whatisThis() {
     if(quest.classList.contains("nondisplay")) { //если окно скрыто
         quest.classList.remove("nondisplay");
         quest.classList.add("display");          //показать его
-
         whatis.style.backgroundImage = "url('./img/cancel.png')";
-
     } else {
         quest.classList.remove("display");      //если окно открыто
         quest.classList.add("nondisplay");      //закрыть
-
         whatis.style.backgroundImage = "url('./img/info_5320.png')";
     }
 }
@@ -46,8 +43,8 @@ function isNumeric(n) {
 
 function checkArray() {
 	var myArray = userArray.value.split( /\s*,\s*/ );
-    var alrdSort = JSON.parse(JSON.stringify(myArray)).sort(compareNumb);
-    sortedArray = alrdSort;
+	    var alrdSort = JSON.parse(JSON.stringify(myArray)).sort(compareNumb);
+	    sortedArray = alrdSort;
 	if ( myArray.join(',') == alrdSort.join(',') && myArray.every( isNumeric )) { 
 		alert('Массив уже отсортирован!');
 		userArray.value = '';
@@ -72,7 +69,6 @@ function checkArray() {
 			divSorted.innerHTML = numbArray[p];
 		}
 
-
 		check.style.visibility = 'hidden';
 		userArray.style.visibility = 'hidden';
 		step.style.visibility = 'visible';
@@ -95,18 +91,18 @@ function compareNumb(a, b) {
 function resetArray() { 	
  	userArray.value = '';
  	numbArray = '';
-    bubbles.innerHTML = '';
-    obrazec.innerHTML = '';
+	bubbles.innerHTML = '';
+	obrazec.innerHTML = '';
  	count = 0;
  	massAnswer.length = 0;
-    userArray.style.visibility = 'visible';
+        userArray.style.visibility = 'visible';
 	check.style.visibility = 'visible';
 	step.style.visibility = 'hidden';
 	reset.style.visibility = 'hidden';
 }
 
 function bubbleSort() {
-	var p =[];					//временный массив
+    var p =[];					//временный массив
     var tmp;					//буфер для обмена значениями
     var storage = '';			// временное хранилище массива массивов хода сортировки
 
