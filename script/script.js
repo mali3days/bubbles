@@ -13,7 +13,7 @@ var check = $( 'check' );
 var step = $( 'step' );
 var reset = $( 'reset' );
 var bubbles = $( 'bubbles' );
-var obrazec = $( 'obrazec' );
+var sample = $( 'sample' );
 var whatis = $( 'wtf' );
 var quest = $( 'question' );
 var close = $( 'close' );
@@ -56,7 +56,7 @@ function checkArray() {
 			var div = document.createElement('div');
 			div.className='divSimp';
 			div.id = 'element' + i;
-			obrazec.appendChild(div);
+			sample.appendChild(div);
 			div.innerHTML = numbArray[i];
 		}
 
